@@ -1,0 +1,12 @@
+tableau_library:
+  version: 1.x
+  css:
+    theme:
+      css/tableau.css: {}
+  js:
+    js/tableau.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once

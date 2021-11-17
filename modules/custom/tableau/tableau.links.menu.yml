@@ -1,0 +1,5 @@
+tableau.settings:
+  route_name: tableau.settings
+  title: Tableau Take Home Assessment Settings
+  description: 'Administer Take Home Assessment Settings'
+  parent: 'system.admin_config_system'

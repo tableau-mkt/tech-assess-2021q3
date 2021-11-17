@@ -1,0 +1,15 @@
+tableau.settings:
+  path: '/admin/tableau/settings'
+  defaults:
+    _form: '\Drupal\tableau\Form\TableauSettingsForm'
+    _title: 'Tableau Take Home Assessment Settings'
+  requirements:
+    _permission: 'administer site configuration'
+tableau.api:
+  path: '/api/accessibility/{node}'
+  defaults:
+    _controller: '\Drupal\tableau\Controller\TableauController::get_api_endpoint'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
+    _format: json

@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Code for the Tableau Take Home Assessment
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function tableau_theme() {
+    return [
+        'tableau_template' => [
+            'variables' => ['button_text' => NULL],
+        ],
+    ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function tableau_page_attachments(array &$page) {
+    $node_id = \Drupal::routeMatch()->getRawParameter('node');
+    $page['#attached']['drupalSettings']['nodeId'] = $node_id;
+}

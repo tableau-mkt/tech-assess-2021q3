@@ -1,0 +1,6 @@
+name: Tableau Take Home Assessment
+type: module
+description: Adds a custom block that retrieves accessibility analysis results for the page via AJAX.
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Tableau'

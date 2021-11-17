@@ -1,0 +1,123 @@
+/* Styles for block, buttons, spinner & table elements */
+
+.block-tableau-block .content {
+    position: relative;
+}
+
+.a-tableau__button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline-offset: 4px;
+    padding: 0;
+    position: relative;
+    transition: filter 250ms;
+}
+
+.a-tableau__button:hover {
+    filter: brightness(110%);
+}
+
+.a-tableau__button:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.a-tableau__button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.a-tableau__button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.a-tableau__button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.a-tableau__button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.shadow {
+    background: hsl(0deg 0% 0% / 0.25);
+    border-radius: 12px;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+    width: 100%;
+    will-change: transform;
+}
+
+.edge {
+    background: linear-gradient(to left, hsl(340deg 100% 16%) 0%, hsl(340deg 100% 32%) 8%, hsl(340deg 100% 32%) 92%, hsl(340deg 100% 16%) 100%);
+    border-radius: 12px;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.front {
+    background: hsl(345deg 100% 47%);
+    border-radius: 12px;
+    color: white;
+    display: block;
+    font-size: 1.25rem;
+    padding: 12px 25px;
+    position: relative;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+    will-change: transform;
+}
+
+.a-tableau__table {
+    font-size: 1rem;
+}
+
+.a-tableau__table .pass {
+    color: green;
+}
+
+.a-tableau__table .fail {
+    color: red;
+}
+
+.spinner__container {
+    display: none;
+    height: 30px;
+    margin-left: 10px;
+    position: absolute;
+    top: 9px;
+    width: 30px;
+}
+
+@keyframes animation {
+    0% {
+        stroke-dasharray: 1 98;
+        stroke-dashoffset: -105;
+    }
+    50% {
+        stroke-dasharray: 80 10;
+        stroke-dashoffset: -160;
+    }
+    100% {
+        stroke-dasharray: 1 98;
+        stroke-dashoffset: -300;
+    }
+}
+
+.spinner {
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-name: animation;
+    animation-timing-function: cubic-bezier;
+    transform-origin: center;
+}

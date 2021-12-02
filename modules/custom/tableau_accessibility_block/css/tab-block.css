@@ -1,0 +1,10 @@
+.js-tab-error {
+  color: #ff0000;
+}
+.js-tab-success {
+  color: #00ff00;
+}
+.js-tab-data-list {
+  margin: 1.5em 0;
+  padding-left: 1.5em;
+}

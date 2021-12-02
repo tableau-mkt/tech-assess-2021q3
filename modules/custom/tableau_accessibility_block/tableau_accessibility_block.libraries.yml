@@ -1,0 +1,11 @@
+tab.block:
+  version: VERSION
+  css:
+    theme:
+      css/tab-block.css: { minified: false }
+  js:
+    js/tab-block.js: { minified: false }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once

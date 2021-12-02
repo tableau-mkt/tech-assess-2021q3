@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - tableau_accessibility_block
+  theme:
+    - bartik
+id: tableauaccessibilityblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: tableau_accessibility_block
+settings:
+  id: tableau_accessibility_block
+  label: 'Tableau Accessibility Block'
+  provider: tableau_accessibility_block
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,4 @@
+administer tableau accessibility block settings:
+  title: 'Administer Tableau Accessibility Block Settings'
+  description: 'Configure API endpoing settings.'
+  restrict access: TRUE

@@ -1,0 +1,13 @@
+tableau_accessibility_block.settings:
+  path: '/admin/config/tableau-accessibility-settings'
+  defaults:
+    _form: '\Drupal\tableau_accessibility_block\Form\EndpointSettings'
+    _title: 'Tableau Accessibility Block Settings'
+  requirements:
+    _permission: 'administer tableau accessibility block settings'
+tableau_accessibility_block.endpoint:
+  path: '/api/accessibility'
+  defaults:
+    _controller: '\Drupal\tableau_accessibility_block\Controller\Endpoint::checkUrl'
+  requirements:
+    _permission: 'access content'

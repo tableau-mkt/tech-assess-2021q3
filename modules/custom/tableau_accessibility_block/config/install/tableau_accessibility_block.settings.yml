@@ -1,0 +1,8 @@
+base_url:
+  value: 'https://dev-tech-homework.pantheonsite.io'
+external_endpoint:
+  value: 'https://us-central1-api-project-30183362591.cloudfunctions.net/axe-puppeteer-test'
+authentication_header:
+  value: 'x-tableau-auth'
+header_value:
+  value: 'AOaxT3DBGfyXtR68PgFzcZma4bfzLeuLFaLuX9jGHC'

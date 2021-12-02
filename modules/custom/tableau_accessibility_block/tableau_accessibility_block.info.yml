@@ -1,0 +1,7 @@
+name: Tableau Accessibility Block
+core: 8.x
+description: Provides a block to check the accessbility analysis of each page.
+type: module
+dependencies:
+  - drupal:block
+core_version_requirement: ^8

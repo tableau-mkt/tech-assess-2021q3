@@ -1,0 +1,5 @@
+tableau_accessibility_block:
+  title: 'Accessibility Block Settings'
+  route_name: 'tableau_accessibility_block.settings'
+  group: 'tableau_accessibility_block'
+  weight: 1

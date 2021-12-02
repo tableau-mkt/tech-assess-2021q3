@@ -1,0 +1,6 @@
+tableau_accessibility_block.settings:
+  title: 'Tableau Accessibility Block Settings'
+  parent: system.admin_config_system
+  description: 'Manage Tableau Accessibility Block settings.'
+  route_name: tableau_accessibility_block.settings
+  weight: 99

@@ -1,0 +1,5 @@
+<div {{ attributes.setAttribute('id','violations-container') }}>
+  {% for violation in violations %}
+    <p class = {{ violation.rating }}>{{ violation.id }} : {{ violation.count }}</p>
+  {% endfor %}
+</div>

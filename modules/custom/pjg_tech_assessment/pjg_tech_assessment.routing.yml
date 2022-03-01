@@ -1,0 +1,16 @@
+pjg_tech_assessment.ajax_response:
+  path: '/api/accessibility/'
+  defaults:
+    _controller: 'Drupal\pjg_tech_assessment\Controller\AjaxController::createAjaxResponse'
+  requirements:
+    _permission: 'access content'
+
+pjg_tech_assessment.admin_settings:
+  path: '/admin/config/pjg-tech-assessment/admin-settings'
+  defaults:
+    _form: '\Drupal\pjg_tech_assessment\Form\AccessibilityApiForm'
+    _title: 'ApiAccessibilityConfiguration'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

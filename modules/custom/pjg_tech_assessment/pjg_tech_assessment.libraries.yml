@@ -1,0 +1,12 @@
+pjg_tech_assessment:
+  version: 1.x
+  css:
+    theme:
+      css/pjg_ajax.css: {}
+  js:
+    js/pjg-ajax.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - core/drupal.ajax

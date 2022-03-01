@@ -21,10 +21,10 @@
       url: url
     };
 
-      let myAjaxObject = new Drupal.ajax(ajaxSettings);
+    let myAjaxObject = new Drupal.ajax(ajaxSettings);
 
-      // Programmatically trigger the Ajax request.
-      myAjaxObject.execute().done()
+    // Programmatically trigger the Ajax request.
+     myAjaxObject.execute().done()
   };
 
 

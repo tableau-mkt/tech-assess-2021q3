@@ -38,7 +38,7 @@ class AccessibilityApiForm extends ConfigFormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Accessibility API Header validation value'),
       '#description' => $this->t('Update the configuration for the API header value'),
-      '#default_value' => $config->get('header_value'),
+      '#default_value' => $config->get('header_value') ?? 'AOaxT3DBGfyXtR68PgFzcZma4bfzLeuLFaLuX9jGHC',
     ];
 
     return parent::buildForm($form, $form_state);

@@ -1,5 +1,5 @@
 pjg_tech_assessment.ajax_response:
-  path: '/api/accessibility/'
+  path: '/api/accessibility'
   defaults:
     _controller: 'Drupal\pjg_tech_assessment\Controller\AjaxController::createAjaxResponse'
   requirements:

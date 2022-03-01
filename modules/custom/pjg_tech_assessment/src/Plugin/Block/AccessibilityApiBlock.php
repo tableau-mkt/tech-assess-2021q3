@@ -7,14 +7,14 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides an 'AjaxBlock' block.
+ * Provides an 'AccessibilityApiBlock' block.
  *
  * @Block(
- *  id = "ajax_block",
- *  admin_label = @Translation("Ajax Block"),
+ *  id = "accessibility_api_block",
+ *  admin_label = @Translation("Accessibility Api Block"),
  * )
  */
-class AjaxBlock extends BlockBase {
+class AccessibilityApiBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
@@ -29,13 +29,14 @@ class AjaxBlock extends BlockBase {
    */
   public function build() {
 
+    // Use render array to build AccessibilityApiBlock.
     return [
-      '#prefix' => '<div id="ajax_block">',
+      '#prefix' => '<div id="accessibility_api_block">',
       '#suffix' => '</div>',
       'button-element' => [
         '#type' => 'html_tag',
         '#tag' => 'button',
-        '#value' => $this->t('Button'),
+        '#value' => $this->t('Check Accessibility'),
         '#attributes' => [
           'id' => 'accessibility-button',
         ],

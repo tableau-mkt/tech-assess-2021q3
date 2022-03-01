@@ -17,7 +17,7 @@ class AccessibilityApiForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'pjgTechAssessment.adminsettings',
+      'accessibilityApiBlock.configsettings',
     ];
   }
 
@@ -32,15 +32,20 @@ class AccessibilityApiForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('pjgTechAssessment.adminsettings');
 
+    // Collect AccssibilityApiForm's config settings
+    // to set the header_value default.
+    $config = $this->config('accessibilityApiBlock.configsettings');
+
+    // Set header_value to be used with the Accessibility Api request.
     $form['header_value'] = [
-      '#type' => 'textarea',
+      '#type' => 'textfield',
       '#title' => $this->t('Accessibility API Header validation value'),
       '#description' => $this->t('Update the configuration for the API header value'),
       '#default_value' => $config->get('header_value') ?? 'AOaxT3DBGfyXtR68PgFzcZma4bfzLeuLFaLuX9jGHC',
     ];
 
+    // Return form.
     return parent::buildForm($form, $form_state);
   }
 
@@ -50,13 +55,16 @@ class AccessibilityApiForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
 
+    // Set the header_value to the default value unless a user
+    // has set a  new header_value.
     if (empty($form_state->getValue('header_value'))){
       $header_value = 'AOaxT3DBGfyXtR68PgFzcZma4bfzLeuLFaLuX9jGHC';
     } else {
       $header_value = $form_state->getValue('header_value');
     }
 
-    $this->config('pjgTechAssessment.adminsettings')
+    // Save the header_value.
+    $this->config('accessibilityApiBlock.configsettings')
       ->set('header_value', $header_value)
       ->save();
   }

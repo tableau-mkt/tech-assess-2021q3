@@ -25,3 +25,9 @@ if (file_exists($local_settings)) {
 }
 
 $settings['hash_salt'] = 'pepperpepperpepperpepperpepperpepperpepperpepperpepper';
+
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
+}

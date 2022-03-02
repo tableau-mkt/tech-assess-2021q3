@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains pjg_tech_assessment.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help() for the module.
+ */
+function pjg_tech_assessment_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the pjg_tech_assessment module.
+    case 'help.page.pjg_tech_assessment':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Creates block that evaluates accessibility of current node') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function pjg_tech_assessment_theme($existing, $type, $theme, $path): array {
+  return [
+    'violations-container' => [
+      'variables' => [
+        'violations' => NULL
+      ],
+      'template' => 'violations-container',
+    ],
+  ];
+}

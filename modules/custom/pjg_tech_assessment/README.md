@@ -22,6 +22,8 @@ to the default value of AOaxT3DBGfyXtR68PgFzcZma4bfzLeuLFaLuX9jGHC if it is not 
 At the moment, there is not much error handling. I would certainly update that so that there's better monitoring as to
 when/how the ajax function is falling over.
 
+I would also move more configuration information to the config file (for example https://dev-tech-homework.pantheonsite.io).
+
 The http trigger for the ___ function is rather slow. I would update the guzzle request to be asynchronous so
 that other functionality does not halt while we wait for a response.
 

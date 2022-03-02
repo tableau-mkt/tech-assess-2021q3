@@ -2,9 +2,7 @@
 
 namespace Drupal\pjg_tech_assessment\Plugin\Block;
 
-use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Provides an 'AccessibilityApiBlock' block.
@@ -20,8 +18,7 @@ class AccessibilityApiBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function defaultConfiguration() {
-    return [
-      ] + parent::defaultConfiguration();
+    return [] + parent::defaultConfiguration();
   }
 
   /**
@@ -45,12 +42,13 @@ class AccessibilityApiBlock extends BlockBase {
         '#type' => 'html_tag',
         '#tag' => 'div',
         '#attributes' => [
-          'id' => 'violations-div'
+          'id' => 'violations-div',
         ],
       ],
       '#attached' => [
-        'library' => 'pjg_tech_assessment/pjg_tech_assessment'
-      ]
+        'library' => 'pjg_tech_assessment/pjg_tech_assessment',
+      ],
     ];
   }
+
 }
